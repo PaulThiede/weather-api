@@ -1,0 +1,11 @@
+<!-- templates/weather.html -->
+<html>
+  <head><title>Weather</title></head>
+  <body>
+    <h1>Weather in {{ .weather.ResolvedAddress }}</h1>
+    <p>Today: {{ (index .weather.Days 0).Date }}</p>
+    <p>Temperature: {{ (index .weather.Days 0).TempMin }}° - {{ (index .weather.Days 0).TempMax }}°</p>
+    <p>Conditions: {{ (index .weather.Days 0).Conditions }}</p>
+    <p>UV-Index: {{ (index .weather.Days 0).UVindex }}</p>
+  </body>
+</html>
